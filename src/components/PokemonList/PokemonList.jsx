@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const BgMain = styled.div`
   width: auto;
-  margin: 30px;
+  margin: 20px 90px;
   background-color: #dddddd;
   padding: 30px;
   border-radius: 10px;

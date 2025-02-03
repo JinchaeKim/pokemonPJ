@@ -5,7 +5,7 @@ const Header = styled.div`
   display: block;
   width: auto;
   background-color: #ededed;
-  margin: 30px;
+  margin: 20px 90px;
   border-radius: 10px;
 `;
 
@@ -26,8 +26,8 @@ const Balls = styled.div`
 `;
 
 const BallSt = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 2px dashed lightgrey;
   border-radius: 10px;
   padding: 30px;
