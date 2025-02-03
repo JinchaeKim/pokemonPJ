@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const BgMain = styled.div`
+  width: auto;
   margin: 30px;
+  background-color: #dddddd;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
 `;
 
 const BgdImg = styled.img`

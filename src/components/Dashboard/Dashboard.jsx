@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const BallSt = styled.img`
-  width: 70px;
-  height: 70px;
-  border: 1px dashed gray;
-  border-radius: 7px;
-  padding: 30px;
-  background-color: white;
-  margin: 20px;
+const Header = styled.div`
+  display: block;
+  width: auto;
+  background-color: #ededed;
+  margin: 30px;
+  border-radius: 10px;
+`;
+
+const Title = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  font-size: 150%;
+  font-weight: 600;
+  color: #ff2f2f;
 `;
 
 const Balls = styled.div`
@@ -17,21 +25,16 @@ const Balls = styled.div`
   align-items: center;
 `;
 
-const Header = styled.div`
-  display: block;
-  width: 100%;
-  background-color: #fff9f2;
+const BallSt = styled.img`
+  width: 60px;
+  height: 60px;
+  border: 2px dashed lightgrey;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
 `;
 
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  font-size: 150%;
-  font-weight: 600;
-  color: #5b9300;
-`;
 const Dashboard = () => {
   return (
     <Header>
