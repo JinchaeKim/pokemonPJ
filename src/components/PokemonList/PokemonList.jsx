@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import MOCK_DATA from "../../data/pokemonList";
 
+// 리스트 전체
 const BgMain = styled.div`
   width: auto;
   margin: 20px 90px;
-  background-color: #dddddd;
+  background-color: #aeb79e;
   /* background-image: url("https://i.namu.wiki/i/og8wF79k4GZrGDG6hkUl9si686oUjZCFIfa3qQb3EJVk4aWj4gK0YJiNjkF2_sSLewYRsI576AWQwy_HuGDl7Q.webp"); */
   padding: 30px;
   border-radius: 10px;
@@ -29,6 +30,11 @@ const MonCard = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-10px);
+  }
 `;
 
 const BottomWrap = styled.div`
@@ -46,7 +52,7 @@ const MonName = styled.div`
 `;
 
 const AddBtn = styled.button`
-  background-color: red;
+  background-color: #284f41;
   color: white;
   border: white;
   border-radius: 5px;
@@ -56,24 +62,22 @@ const AddBtn = styled.button`
 
 const PokemonList = () => {
   return (
-    <>
-      <BgMain>
-        <MonCardContainer>
-          {MOCK_DATA.map((data) => {
-            return (
-              <MonCard key={data.id}>
-                <MonImg src={data.img_url} />
-                <BottomWrap>
-                  <MonName>{data.korean_name}</MonName>
-                  <p>No.{data.id}</p>
-                </BottomWrap>
-                <AddBtn>추가</AddBtn>
-              </MonCard>
-            );
-          })}
-        </MonCardContainer>
-      </BgMain>
-    </>
+    <BgMain>
+      <MonCardContainer>
+        {MOCK_DATA.map((data) => {
+          return (
+            <MonCard key={data.id}>
+              <MonImg src={data.img_url} />
+              <BottomWrap>
+                <MonName>{data.korean_name}</MonName>
+                <p>No.{data.id}</p>
+              </BottomWrap>
+              <AddBtn>추가</AddBtn>
+            </MonCard>
+          );
+        })}
+      </MonCardContainer>
+    </BgMain>
   );
 };
 

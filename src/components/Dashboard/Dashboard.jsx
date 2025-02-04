@@ -2,21 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = styled.div`
-  display: block;
+  /* display: block; */
   width: auto;
-  background-color: #ededed;
+  background-color: #586249;
   margin: 20px 90px;
   border-radius: 10px;
+  text-align: center;
 `;
 
-const Title = styled.div`
+const Title = styled.img`
   display: flex;
-  justify-content: center;
+  margin: auto;
   align-items: center;
-  padding-top: 40px;
-  font-size: 150%;
-  font-weight: 600;
-  color: #ff2f2f;
+  padding-top: 10px;
 `;
 
 const Balls = styled.div`
@@ -29,17 +27,17 @@ const Balls = styled.div`
 const BallSt = styled.img`
   width: 50px;
   height: 50px;
-  border: 2px dashed lightgrey;
+  border: 2px dashed #ffffff;
   border-radius: 10px;
   padding: 30px;
-  background-color: white;
+  background-color: #ffffff6f;
   margin: 20px;
 `;
 
 const Dashboard = () => {
   return (
     <Header>
-      <Title>넌 내 거야 !</Title>
+      <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
       <Balls>
         <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
         <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
