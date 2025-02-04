@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const MonCard = styled.div`
@@ -53,8 +54,25 @@ const DeleteBtn = styled.button`
 `;
 
 const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
+  const navigate = useNavigate();
   return (
-    <MonCard key={data.id}>
+    <MonCard
+      key={data.id}
+      // 이벤트 버블링 방지 (클릭한 행위가 버블링)
+      onClick={(e) => {
+        // console.log(e.target.contains);
+        if (
+          e.target.classList.contains("add-card-btn") ||
+          e.target.classList.contains("remove-card-btn")
+        ) {
+          return;
+        }
+
+        {
+          navigate("/detail");
+        }
+      }}
+    >
       <MonImg src={data.img_url} />
       <BottomWrap>
         <MonName>{data.korean_name}</MonName>
@@ -62,6 +80,7 @@ const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
       </BottomWrap>
       {isAdd === true ? (
         <AddBtn
+          className="add-card-btn"
           onClick={() => {
             addMypokeMon(data.id);
           }}
@@ -70,6 +89,7 @@ const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
         </AddBtn>
       ) : (
         <DeleteBtn
+          className="remove-card-btn"
           onClick={() => {
             deleteMypokeMon(data.id);
           }}
