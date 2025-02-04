@@ -50,7 +50,17 @@ const AddBtn = styled.button`
   cursor: pointer;
 `;
 
-const PokemonCard = ({ setmypokeMon }) => {
+const DeleteBtn = styled.button`
+  background-color: #ff0000;
+  color: white;
+  border: white;
+  border-radius: 5px;
+  padding: 7px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+`;
+
+const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon }) => {
   return (
     <MonCardContainer>
       {MOCK_DATA.map((data) => {
@@ -61,13 +71,25 @@ const PokemonCard = ({ setmypokeMon }) => {
               <MonName>{data.korean_name}</MonName>
               <p>No.{data.id}</p>
             </BottomWrap>
-            <AddBtn
-              onClick={() => {
-                setmypokeMon(data.id);
-              }}
-            >
-              추가
-            </AddBtn>
+            {/* dash와 list 위치에 따른 버튼 형식 바꾸기 start */}
+            {isAdd === true ? (
+              <AddBtn
+                onClick={() => {
+                  addMypokeMon(data.id);
+                }}
+              >
+                추가
+              </AddBtn>
+            ) : (
+              <DeleteBtn
+                onClick={() => {
+                  deleteMypokeMon(data.id);
+                }}
+              >
+                삭제
+              </DeleteBtn>
+            )}
+            {/* end */}
           </MonCard>
         );
       })}

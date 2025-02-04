@@ -12,10 +12,10 @@ const BgMain = styled.div`
   border: 1px solid lightgray;
 `;
 
-const PokemonList = ({ setmypokeMon }) => {
+const PokemonList = ({ addMypokeMon }) => {
   return (
     <BgMain>
-      <PokemonCard setmypokeMon={setmypokeMon} />
+      <PokemonCard addMypokeMon={addMypokeMon} isAdd={true} />
     </BgMain>
   );
 };
