@@ -39,6 +39,8 @@ const Dashboard = () => {
     <Header>
       <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
       <Balls>
+        {/* List 에서 클릭된 카드(filterMon)를 PockmonCard로 출력하여 BallSt 대체하기 */}
+
         <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
         <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
         <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
