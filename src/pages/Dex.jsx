@@ -15,25 +15,30 @@ const Dex = () => {
     });
     setMyMon([...myMon, findMon]);
 
-    console.log("myMon", myMon);
+    // console.log("myMon", myMon);
     // 6개 이상 alert 띄우기 위치
     // 처음에는 빈 배열이기 때문에 6 이상으로 설정
     if (6 <= myMon.length) {
       alert("최대 6개의 카드만 표시됩니다!");
     }
   };
-
+  console.log("myMon", myMon);
   const deleteMypokeMon = (id) => {
     const filterMon = myMon.filter((i) => {
       return i.id !== id;
     });
+    console.log("filterMon", filterMon);
     setMyMon(filterMon);
   };
 
   return (
     <>
-      <Dashboard deleteMypokeMon={deleteMypokeMon} myMon={myMon} />
-      <PokemonList addMypokeMon={addMypokeMon} myMon={myMon} />
+      <Dashboard myMon={myMon} />
+      <PokemonList
+        addMypokeMon={addMypokeMon}
+        myMon={myMon}
+        deleteMypokeMon={deleteMypokeMon}
+      />
     </>
   );
 };

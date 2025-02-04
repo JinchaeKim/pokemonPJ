@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MonCard = styled.div`
   background-color: white;
-  box-shadow: 0px 0px 7px 0px rgb(193, 193, 193);
+  box-shadow: 0px 0px 7px 0px rgb(77, 77, 77);
   border-radius: 10px;
   width: 170px;
   height: 250px;
@@ -43,7 +43,7 @@ const AddBtn = styled.button`
 `;
 
 const DeleteBtn = styled.button`
-  background-color: #ff0000;
+  background-color: #d90000;
   color: white;
   border: white;
   border-radius: 5px;

@@ -20,13 +20,19 @@ const MonCardContainer = styled.div`
   place-items: center;
 `;
 
-const PokemonList = ({ addMypokeMon }) => {
+const PokemonList = ({ addMypokeMon, deleteMypokeMon }) => {
   return (
     <BgMain>
       <MonCardContainer>
         {MOCK_DATA.map((data) => {
           return (
-            <PokemonCard addMypokeMon={addMypokeMon} isAdd={true} data={data} />
+            <PokemonCard
+              key={data.id}
+              addMypokeMon={addMypokeMon}
+              deleteMypokeMon={deleteMypokeMon}
+              isAdd={true}
+              data={data}
+            />
           );
         })}
       </MonCardContainer>

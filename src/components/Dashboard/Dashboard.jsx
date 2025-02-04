@@ -9,13 +9,14 @@ const Header = styled.div`
   margin: 20px 90px;
   border-radius: 10px;
   text-align: center;
+  padding-bottom: 20px;
 `;
 
 const Title = styled.img`
   display: flex;
   margin: auto;
   align-items: center;
-  padding-top: 10px;
+  padding: 10px;
 `;
 
 const Balls = styled.div`
@@ -35,27 +36,22 @@ const BallSt = styled.img`
   margin: 20px;
 `;
 
-const Dashboard = ({ deleteMypokeMon, myMon }) => {
+const Dashboard = ({ myMon }) => {
   // 여기서 6번 계산
   // myMon에 있는 객체의 개수만큼 card를 출력하고,
-  // 6-(myMon 개수) 만큼 BallSt를 출력하기
 
-  // useEffect(() => {
-  //   if (myMon.length > 6) {
-  //     alert("최대 6개의 카드만 표시됩니다!");
-  //   }
-  // }, [myMon.length]);
-
+  // 6-(myMon 개수)
   const emptyCards = 6 - myMon.length;
-
   return (
     <Header>
       <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
       <Balls>
-        {/*  // 6번 순회, myMon에 들어간 갯수만큼을 포켓몬 카드로 보여주기*/}
+        {/* myMon(클릭한 카드)배열 중 6번째까지만 자르고 카드 형식으로 mapping하기*/}
         {myMon.slice(0, 6).map((mon, index) => {
           return <PokemonCard key={index} data={mon} isAdd={false} />;
         })}
+        {/* Array.from : length만큼 요소가 undefinded인 빈 배열을 생성 
+            그 배열의 갯수(index 만큼만 mapping하기 (요소가 들어가는 부분에 _은 index만 필요하기 때문에 !!)*/}
         {Array.from({ length: emptyCards }).map((_, index) => (
           <BallSt
             key={index}
