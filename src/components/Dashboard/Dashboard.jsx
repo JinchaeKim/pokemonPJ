@@ -23,6 +23,7 @@ const Balls = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 5px;
 `;
 
 const BallSt = styled.img`
