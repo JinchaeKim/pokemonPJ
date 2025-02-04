@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import PokemonCard from "../PokemonCard/PokemonCard";
 
 const Header = styled.div`
   /* display: block; */
@@ -34,26 +35,33 @@ const BallSt = styled.img`
   margin: 20px;
 `;
 
-const Dashboard = ({ deleteMypokeMon }) => {
+const Dashboard = ({ deleteMypokeMon, myMon }) => {
   // 여기서 6번 계산
-  for (let i = 0; i <= 6; i++) {}
+  // myMon에 있는 객체의 개수만큼 card를 출력하고,
+  // 6-(myMon 개수) 만큼 BallSt를 출력하기
+
+  // useEffect(() => {
+  //   if (myMon.length > 6) {
+  //     alert("최대 6개의 카드만 표시됩니다!");
+  //   }
+  // }, [myMon.length]);
+
+  const emptyCards = 6 - myMon.length;
+
   return (
     <Header>
       <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
       <Balls>
-        {/* List 에서 클릭된 카드(filterMon)를 PockmonCard로 출력하여 BallSt 대체하기 
-            ?? filterMon은 배열. PokemonCard와 별개로 카드 만들기..?
-            ?? PokemonCard를 어떻게 dash에 출력?
-            ?? 출력한 후 BallSt를 대체하기
-
-            // 6번 순회, myMon에 들어간 갯수만큼을 포켓몬 카드로 보여주기
-        */}
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
-        <BallSt src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" />
+        {/*  // 6번 순회, myMon에 들어간 갯수만큼을 포켓몬 카드로 보여주기*/}
+        {myMon.slice(0, 6).map((mon, index) => {
+          return <PokemonCard key={index} data={mon} isAdd={false} />;
+        })}
+        {Array.from({ length: emptyCards }).map((_, index) => (
+          <BallSt
+            key={index}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png"
+          />
+        ))}
       </Balls>
     </Header>
   );

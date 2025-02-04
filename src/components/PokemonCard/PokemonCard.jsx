@@ -1,13 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import MOCK_DATA from "../../data/pokemonList";
-
-const MonCardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 28px;
-  place-items: center;
-`;
 
 const MonCard = styled.div`
   background-color: white;
@@ -60,40 +52,32 @@ const DeleteBtn = styled.button`
   cursor: pointer;
 `;
 
-const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon }) => {
+const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
   return (
-    <MonCardContainer>
-      {MOCK_DATA.map((data) => {
-        return (
-          <MonCard key={data.id}>
-            <MonImg src={data.img_url} />
-            <BottomWrap>
-              <MonName>{data.korean_name}</MonName>
-              <p>No.{data.id}</p>
-            </BottomWrap>
-            {/* dash와 list 위치에 따른 버튼 형식 바꾸기 start */}
-            {isAdd === true ? (
-              <AddBtn
-                onClick={() => {
-                  addMypokeMon(data.id);
-                }}
-              >
-                추가
-              </AddBtn>
-            ) : (
-              <DeleteBtn
-                onClick={() => {
-                  deleteMypokeMon(data.id);
-                }}
-              >
-                삭제
-              </DeleteBtn>
-            )}
-            {/* end */}
-          </MonCard>
-        );
-      })}
-    </MonCardContainer>
+    <MonCard key={data.id}>
+      <MonImg src={data.img_url} />
+      <BottomWrap>
+        <MonName>{data.korean_name}</MonName>
+        <p>No.{data.id}</p>
+      </BottomWrap>
+      {isAdd === true ? (
+        <AddBtn
+          onClick={() => {
+            addMypokeMon(data.id);
+          }}
+        >
+          추가
+        </AddBtn>
+      ) : (
+        <DeleteBtn
+          onClick={() => {
+            deleteMypokeMon(data.id);
+          }}
+        >
+          삭제
+        </DeleteBtn>
+      )}
+    </MonCard>
   );
 };
 

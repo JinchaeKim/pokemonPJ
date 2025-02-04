@@ -13,10 +13,14 @@ const Dex = () => {
       // filter는 배열을 반환
       return i.id === id;
     });
-    console.log("findMon", findMon);
     setMyMon([...myMon, findMon]);
-    // findMon(배열)을 dashboard에 카드로 만들기
-    // findMon을 PokemonCard에 전달하여 만들기?
+
+    console.log("myMon", myMon);
+    // 6개 이상 alert 띄우기 위치
+    // 처음에는 빈 배열이기 때문에 6 이상으로 설정
+    if (6 <= myMon.length) {
+      alert("최대 6개의 카드만 표시됩니다!");
+    }
   };
 
   const deleteMypokeMon = (id) => {
@@ -28,8 +32,8 @@ const Dex = () => {
 
   return (
     <>
-      <Dashboard deleteMypokeMon={deleteMypokeMon} />
-      <PokemonList addMypokeMon={addMypokeMon} />
+      <Dashboard deleteMypokeMon={deleteMypokeMon} myMon={myMon} />
+      <PokemonList addMypokeMon={addMypokeMon} myMon={myMon} />
     </>
   );
 };

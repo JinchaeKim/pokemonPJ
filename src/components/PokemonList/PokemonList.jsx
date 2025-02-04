@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
+import MOCK_DATA from "../../data/pokemonList.js";
 
 const BgMain = styled.div`
   width: auto;
@@ -12,10 +13,23 @@ const BgMain = styled.div`
   border: 1px solid lightgray;
 `;
 
+const MonCardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 28px;
+  place-items: center;
+`;
+
 const PokemonList = ({ addMypokeMon }) => {
   return (
     <BgMain>
-      <PokemonCard addMypokeMon={addMypokeMon} isAdd={true} />
+      <MonCardContainer>
+        {MOCK_DATA.map((data) => {
+          return (
+            <PokemonCard addMypokeMon={addMypokeMon} isAdd={true} data={data} />
+          );
+        })}
+      </MonCardContainer>
     </BgMain>
   );
 };
