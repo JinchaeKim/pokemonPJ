@@ -20,7 +20,7 @@ const MonCardContainer = styled.div`
   place-items: center;
 `;
 
-const PokemonList = ({ addMypokeMon, deleteMypokeMon }) => {
+const PokemonList = ({ addMypokeMon }) => {
   return (
     <BgMain>
       <MonCardContainer>
@@ -29,8 +29,7 @@ const PokemonList = ({ addMypokeMon, deleteMypokeMon }) => {
             <PokemonCard
               key={data.id}
               addMypokeMon={addMypokeMon}
-              deleteMypokeMon={deleteMypokeMon}
-              isAdd={true}
+              isAdd={true} // 리스트에 있을 때 참
               data={data}
             />
           );
