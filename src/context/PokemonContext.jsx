@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import MOCK_DATA from "../data/pokemonList";
 
 export const PokemonContext = createContext();
 
@@ -19,9 +20,10 @@ export function PokemonProvider({ children }) {
     const findMon = MOCK_DATA.find((i) => {
       return i.id === id;
     });
+    console.log("findMon", findMon);
 
     // 중복 방지 로직
-    if (myMon.some((monEl) => findMon.name === monEl.name)) {
+    if (myMon.some((monEl) => findMon.id === monEl.id)) {
       alert("이미 추가된 포켓몬입니다.");
     } else {
       setMyMon([...myMon, findMon]);

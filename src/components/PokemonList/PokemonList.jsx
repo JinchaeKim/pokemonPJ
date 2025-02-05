@@ -6,8 +6,6 @@ import { BgMain, MonCardContainer } from "../../styles/StyledComponents.jsx";
 import { PokemonContext } from "../../context/PokemonContext.jsx";
 
 const PokemonList = () => {
-  const { addMypokeMon } = useContext(PokemonContext);
-
   return (
     <BgMain>
       <MonCardContainer>
@@ -15,7 +13,6 @@ const PokemonList = () => {
           return (
             <PokemonCard
               key={data.id}
-              addMypokeMon={addMypokeMon}
               isAdd={true} // 리스트에 있을 때 참
               data={data}
             />
