@@ -26,7 +26,8 @@ const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
         }
 
         {
-          navigate("/detail");
+          // key에서 힌트 얻음
+          navigate(`/detail?id=${data.id}`);
         }
       }}
     >
