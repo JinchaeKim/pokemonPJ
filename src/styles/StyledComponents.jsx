@@ -139,3 +139,64 @@ export const DeleteBtn = styled.button`
   margin-top: 10px;
   cursor: pointer;
 `;
+
+// Detail
+export const DetailMain = styled.div`
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+`;
+
+export const DetailBgImg = styled.img`
+  opacity: 75%;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 1;
+`;
+export const DetailCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background-color: #fcfcfcf5;
+  border: 12px solid #c1c1c1;
+  border-radius: 20px;
+  width: 300px;
+  height: 500px;
+`;
+
+export const DetailCard = styled.div`
+  z-index: 2;
+`;
+
+export const DTitle = styled.div`
+  font-size: larger;
+  font-weight: bold;
+  color: #060677;
+  padding: 30px;
+`;
+
+export const DType = styled.div`
+  padding: 10px;
+  font-weight: 600;
+  padding-bottom: 40px;
+`;
+
+export const DBtn = styled.button`
+  background-color: #5f5f5f;
+  color: white;
+  margin-top: 60px;
+  padding: 7px 15px;
+  border: 1px solid #f5f5f5ed;
+  border-radius: 5px;
+`;
