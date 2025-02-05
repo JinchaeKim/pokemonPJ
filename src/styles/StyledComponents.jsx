@@ -163,7 +163,7 @@ export const DetailCardContainer = styled.div`
   margin: auto;
 
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -171,8 +171,8 @@ export const DetailCardContainer = styled.div`
   background-color: #fcfcfcf5;
   border: 12px solid #c1c1c1;
   border-radius: 20px;
-  width: 300px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
 `;
 
 export const DetailCard = styled.div`
@@ -195,8 +195,8 @@ export const DType = styled.div`
 export const DBtn = styled.button`
   background-color: #5f5f5f;
   color: white;
-  margin-top: 60px;
-  padding: 7px 15px;
+  margin-top: 50px;
+  padding: 10px 20px;
   border: 1px solid #f5f5f5ed;
   border-radius: 5px;
 `;
