@@ -1,40 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
-const BgImg = styled.img`
-  opacity: 70%;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-`;
-
-const Group = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-`;
-
-const TitleImg = styled.img`
-  position: absolute;
-  width: 600px;
-  z-index: 2;
-`;
-
-const BtnSt = styled.button`
-  position: absolute;
-  margin-top: 300px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: red;
-  color: white;
-  border-radius: 5px;
-  z-index: 2;
-`;
+import { BgImg, BtnSt, Group, TitleImg } from "../styles/StyledComponents";
 
 const Home = () => {
   const navigate = useNavigate();
