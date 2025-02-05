@@ -25,6 +25,7 @@ export function PokemonProvider({ children }) {
     // 중복 방지 로직
     if (myMon.some((monEl) => findMon.id === monEl.id)) {
       alert("이미 추가된 포켓몬입니다.");
+      return;
     } else {
       setMyMon([...myMon, findMon]);
     }
