@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
 import MOCK_DATA from "../../data/pokemonList.js";
 import { BgMain, MonCardContainer } from "../../styles/StyledComponents.jsx";
+import { PokemonContext } from "../../context/PokemonContext.jsx";
 
-const PokemonList = ({ addMypokeMon }) => {
+const PokemonList = () => {
+  const { addMypokeMon } = useContext(PokemonContext);
+
   return (
     <BgMain>
       <MonCardContainer>

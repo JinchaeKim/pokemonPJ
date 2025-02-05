@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import {
@@ -9,8 +9,12 @@ import {
   MonImg,
   MonName,
 } from "../../styles/StyledComponents";
+import { PokemonContext } from "../../context/PokemonContext";
 
-const PokemonCard = ({ addMypokeMon, isAdd, deleteMypokeMon, data }) => {
+const PokemonCard = () => {
+  const { addMypokeMon, isAdd, deleteMypokeMon, data } =
+    useContext(PokemonContext);
+  console.log("data", data);
   const navigate = useNavigate();
   return (
     <MonCard
