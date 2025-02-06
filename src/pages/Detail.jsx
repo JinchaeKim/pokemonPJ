@@ -35,10 +35,10 @@ const Detail = () => {
   //   setSearchParams(searchParams);
   // };
 
-  // detail의 id와 myMon의 아이디랑 같다면 true
-  const findD_Card = myMon.find((myMonEl) => {
-    return myMonEl.id === d_TargetCard.id;
-  });
+  // // detail의 id와 myMon의 아이디랑 같다면 true
+  // const findD_Card = myMon.find((myMonEl) => {
+  //   return myMonEl.id === d_TargetCard.id;
+  // });
 
   return (
     <DetailMain>
@@ -62,7 +62,7 @@ const Detail = () => {
               >
                 Home
               </DBtn>
-              {findD_Card === true ? (
+              {/* {findD_Card === true ? (
                 <button
                   onClick={() => {
                     deleteMypokeMon(data.id);
@@ -78,7 +78,7 @@ const Detail = () => {
                 >
                   추가
                 </button>
-              )}
+              )} */}
             </div>
           );
         })}
