@@ -2,6 +2,8 @@ import React from "react";
 import MOCK_DATA from "../data/pokemonList";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import {
+  D_AddBtn,
+  D_DelteBtn,
   DBtn,
   DetailBgImg,
   DetailCardContainer,
@@ -56,24 +58,24 @@ const Detail = () => {
                   }
                 }}
               >
-                Home
+                뒤로가기
               </DBtn>
               {findD_Card === true ? (
-                <button
+                <D_DelteBtn
                   onClick={() => {
                     dispatch(deletePokemon(data));
                   }}
                 >
                   삭제
-                </button>
+                </D_DelteBtn>
               ) : (
-                <button
+                <D_AddBtn
                   onClick={() => {
                     dispatch(addPokemon(data));
                   }}
                 >
                   추가
-                </button>
+                </D_AddBtn>
               )}
             </div>
           );

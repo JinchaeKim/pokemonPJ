@@ -200,3 +200,21 @@ export const DBtn = styled.button`
   border: 1px solid #f5f5f5ed;
   border-radius: 5px;
 `;
+
+export const D_AddBtn = styled.button`
+  background-color: #284f41;
+  color: white;
+  margin-top: 50px;
+  padding: 10px 20px;
+  border: 1px solid #f5f5f5ed;
+  border-radius: 5px;
+`;
+
+export const D_DelteBtn = styled.button`
+  background-color: #d90000;
+  color: white;
+  margin-top: 50px;
+  padding: 10px 20px;
+  border: 1px solid #f5f5f5ed;
+  border-radius: 5px;
+`;
