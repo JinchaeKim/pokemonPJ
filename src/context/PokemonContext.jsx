@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import MOCK_DATA from "../data/pokemonList";
+import { useDispatch } from "react-redux";
 
 export const PokemonContext = createContext();
 
@@ -7,9 +8,11 @@ export const PokemonContext = createContext();
 // 영향권에서 사용하기
 export function PokemonProvider({ children }) {
   const [myMon, setMyMon] = useState([]);
+  const dispatch = useDispatch();
 
   // 카드 추가로직
   const addMypokeMon = (id) => {
+    dispatch(addPokemon());
     // 처음에는 빈 배열이기 때문에 6 이상으로 설정 / early return으로 6개까지만
     if (6 <= myMon.length) {
       alert("최대 6개의 카드만 표시됩니다!");

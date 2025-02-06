@@ -11,10 +11,8 @@ import {
 } from "../../styles/StyledComponents";
 import { PokemonContext } from "../../context/PokemonContext";
 
-// isAdd와 data는 context에 없으므로 Dash와 List에서 props로 전달받아야 함.
 const PokemonCard = () => {
-  // const { addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
-  // console.log("data", data);
+  // 리덕스 2가지 핵심 개념 : useSelector(값 조회), useDispatch(값 추가,삭제,수정)
 
   const navigate = useNavigate();
   return (
