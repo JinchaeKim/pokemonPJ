@@ -3,7 +3,7 @@ import Router from "./shared/Router";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { store } from "./redux/config/store";
 
 const GlobalStyle = createGlobalStyle`${reset}`;
 
