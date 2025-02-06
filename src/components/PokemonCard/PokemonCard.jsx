@@ -13,6 +13,7 @@ import {
   addPokemon,
   deletePokemon,
 } from "../../redux/slices/setMyPokemonSlice";
+import { ToastContainer } from "react-toastify";
 
 const PokemonCard = ({ isAdd, data }) => {
   // 리덕스 2가지 핵심 개념 : useSelector(값 조회), useDispatch(값 추가,삭제,수정)

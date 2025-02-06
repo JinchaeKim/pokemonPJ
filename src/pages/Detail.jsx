@@ -35,6 +35,7 @@ const Detail = () => {
   console.log("targetCard", d_TargetCard); // 클릭한 카드의 정보를 배열로 출력
 
   // d_TargetCard는 배열, myMon도 배열 => 두 배열의 교집합 찾기
+  // 추가 <-> 삭제 버튼
   const findD_Card = myMon.some((a) => d_TargetCard.includes(a));
   console.log("myMon", myMon);
 
