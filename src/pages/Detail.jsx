@@ -9,13 +9,18 @@ import {
   DTitle,
   DType,
 } from "../styles/StyledComponents";
+import { useDispatch, useSelector } from "react-redux";
+import { addPokemon, deletePokemon } from "../redux/slices/setMyPokemonSlice";
 
 const Detail = () => {
+  const myMon = useSelector((a) => {
+    return a.setMyPokemon;
+  });
+  const dispatch = useDispatch();
   // mock_data 중에 내가 선택한 것
   const datas = MOCK_DATA;
   const navigate = useNavigate();
 
-  //setSearchParams는 삭제하기!
   const [searchParams] = useSearchParams();
 
   const getId = searchParams.get("id"); // queryString에서 id 값 가져오기
@@ -27,10 +32,9 @@ const Detail = () => {
   });
   console.log("targetCard", d_TargetCard); // 클릭한 카드의 정보를 배열로 출력
 
-  // // detail의 id와 myMon의 아이디랑 같다면 true
-  // const findD_Card = myMon.find((myMonEl) => {
-  //   return myMonEl.id === d_TargetCard.id;
-  // });
+  // d_TargetCard는 배열, myMon도 배열 => 두 배열의 교집합 찾기
+  const findD_Card = myMon.some((a) => d_TargetCard.includes(a));
+  console.log("myMon", myMon);
 
   return (
     <DetailMain>
@@ -54,10 +58,10 @@ const Detail = () => {
               >
                 Home
               </DBtn>
-              {/* {findD_Card === true ? (
+              {findD_Card === true ? (
                 <button
                   onClick={() => {
-                    deleteMypokeMon(data.id);
+                    dispatch(deletePokemon(data));
                   }}
                 >
                   삭제
@@ -65,12 +69,12 @@ const Detail = () => {
               ) : (
                 <button
                   onClick={() => {
-                    addMypokeMon(data.id);
+                    dispatch(addPokemon(data));
                   }}
                 >
                   추가
                 </button>
-              )} */}
+              )}
             </div>
           );
         })}

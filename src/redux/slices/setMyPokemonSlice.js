@@ -11,6 +11,14 @@ const monSlice = createSlice({
     // 어떤 액션을 어떻게 동작할지
     // 리듀서는 함수
     addPokemon: (state, action) => {
+      if (6 <= state.length) {
+        alert("최대 6개의 카드만 표시됩니다!");
+        return;
+      }
+      if (state.some((monEl) => action.payload.id === monEl.id)) {
+        alert("이미 추가된 포켓몬입니다.");
+        return;
+      }
       state.push(action.payload); // immer에서 .push, .pop, .sort 등의 메서드를 이용해서 state를 변경할 수 있도록 허용함
       // return [...state, action.payload] : state의 주소값을 바꿔줌(setState와 같은 역할)
     },

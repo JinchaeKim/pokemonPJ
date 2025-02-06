@@ -8,7 +8,7 @@ const Dashboard = () => {
   const myMon = useSelector((a) => {
     return a.setMyPokemon;
   });
-  console.log("myMon", myMon);
+  // console.log("myMon", myMon);
 
   // 6-(myMon 개수)
   const emptyCards = 6 - myMon.length;
