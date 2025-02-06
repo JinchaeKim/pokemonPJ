@@ -1,12 +1,14 @@
-import React, { useContext, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
 import PokemonCard from "../PokemonCard/PokemonCard";
 import { Balls, BallSt, Header, Title } from "../../styles/StyledComponents";
-import { PokemonContext } from "../../context/PokemonContext";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
-  // 여기서 6번 계산
-  // myMon에 있는 객체의 개수만큼 card를 출력하고,
+  // state의 값을 조회
+  const myMon = useSelector((a) => {
+    return a.setMyPokemon;
+  });
+  console.log("myMon", myMon);
 
   // 6-(myMon 개수)
   const emptyCards = 6 - myMon.length;

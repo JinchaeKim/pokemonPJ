@@ -1,4 +1,4 @@
-import React, from "react";
+import React from "react";
 import MOCK_DATA from "../data/pokemonList";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import {
@@ -9,17 +9,14 @@ import {
   DTitle,
   DType,
 } from "../styles/StyledComponents";
-import { PokemonContext } from "../context/PokemonContext";
 
 const Detail = () => {
-  // const { myMon, addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
-
   // mock_data 중에 내가 선택한 것
   const datas = MOCK_DATA;
   const navigate = useNavigate();
 
   //setSearchParams는 삭제하기!
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const getId = searchParams.get("id"); // queryString에서 id 값 가져오기
   console.log("getId", getId);
@@ -29,11 +26,6 @@ const Detail = () => {
     return data.id === Number(getId); // type 일치시키기
   });
   console.log("targetCard", d_TargetCard); // 클릭한 카드의 정보를 배열로 출력
-
-  // const setSortParams = (e) => {
-  //   searchParams.set("id", "1");
-  //   setSearchParams(searchParams);
-  // };
 
   // // detail의 id와 myMon의 아이디랑 같다면 true
   // const findD_Card = myMon.find((myMonEl) => {
