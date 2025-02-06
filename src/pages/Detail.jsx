@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, from "react";
 import MOCK_DATA from "../data/pokemonList";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import {

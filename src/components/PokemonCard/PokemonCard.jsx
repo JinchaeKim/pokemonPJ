@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React, from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import {
   AddBtn,
   BottomWrap,
@@ -9,12 +8,14 @@ import {
   MonImg,
   MonName,
 } from "../../styles/StyledComponents";
-import { PokemonContext } from "../../context/PokemonContext";
+import { useDispatch } from "react-redux";
+import { addPokemon, deletePokemon } from "../../redux/setMyPokemonSlice";
 
-const PokemonCard = () => {
+const PokemonCard = ({ isAdd, data }) => {
   // 리덕스 2가지 핵심 개념 : useSelector(값 조회), useDispatch(값 추가,삭제,수정)
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
   return (
     <MonCard
       key={data.id}
@@ -43,7 +44,7 @@ const PokemonCard = () => {
         <AddBtn
           className="add-card-btn"
           onClick={() => {
-            addMypokeMon(data.id);
+            dispatch(addPokemon(data));
           }}
         >
           추가
@@ -52,7 +53,7 @@ const PokemonCard = () => {
         <DeleteBtn
           className="remove-card-btn"
           onClick={() => {
-            deleteMypokeMon(data.id);
+            dispatch(deletePokemon(data));
           }}
         >
           삭제
