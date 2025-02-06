@@ -12,7 +12,7 @@ import {
 import { PokemonContext } from "../context/PokemonContext";
 
 const Detail = () => {
-  const { myMon, addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
+  // const { myMon, addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
 
   // mock_data 중에 내가 선택한 것
   const datas = MOCK_DATA;

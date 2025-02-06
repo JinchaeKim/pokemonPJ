@@ -5,7 +5,7 @@ import { Balls, BallSt, Header, Title } from "../../styles/StyledComponents";
 import { PokemonContext } from "../../context/PokemonContext";
 
 const Dashboard = () => {
-  const { myMon } = useContext(PokemonContext);
+  // const { myMon } = useContext(PokemonContext);
   // 여기서 6번 계산
   // myMon에 있는 객체의 개수만큼 card를 출력하고,
 

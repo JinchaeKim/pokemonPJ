@@ -12,8 +12,8 @@ import {
 import { PokemonContext } from "../../context/PokemonContext";
 
 // isAdd와 data는 context에 없으므로 Dash와 List에서 props로 전달받아야 함.
-const PokemonCard = ({ isAdd, data }) => {
-  const { addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
+const PokemonCard = () => {
+  // const { addMypokeMon, deleteMypokeMon } = useContext(PokemonContext);
   // console.log("data", data);
 
   const navigate = useNavigate();
