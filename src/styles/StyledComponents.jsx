@@ -29,10 +29,19 @@ export const BtnSt = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: red;
+  background-color: #ff1010;
   color: white;
   border-radius: 5px;
   z-index: 2;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #d90000;
+  }
 `;
 
 // Dashboard
@@ -128,6 +137,15 @@ export const AddBtn = styled.button`
   padding: 7px 20px;
   margin-top: 10px;
   cursor: pointer;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #5d9582;
+  }
 `;
 
 export const DeleteBtn = styled.button`
@@ -138,6 +156,15 @@ export const DeleteBtn = styled.button`
   padding: 7px 20px;
   margin-top: 10px;
   cursor: pointer;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #e97777;
+  }
 `;
 
 // Detail
@@ -199,6 +226,16 @@ export const DBtn = styled.button`
   padding: 10px 20px;
   border: 1px solid #f5f5f5ed;
   border-radius: 5px;
+  cursor: pointer;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #929292;
+  }
 `;
 
 export const D_AddBtn = styled.button`
@@ -208,6 +245,16 @@ export const D_AddBtn = styled.button`
   padding: 10px 20px;
   border: 1px solid #f5f5f5ed;
   border-radius: 5px;
+  cursor: pointer;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #5d9582;
+  }
 `;
 
 export const D_DelteBtn = styled.button`
@@ -217,4 +264,14 @@ export const D_DelteBtn = styled.button`
   padding: 10px 20px;
   border: 1px solid #f5f5f5ed;
   border-radius: 5px;
+  cursor: pointer;
+
+  a {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #e97777;
+  }
 `;
