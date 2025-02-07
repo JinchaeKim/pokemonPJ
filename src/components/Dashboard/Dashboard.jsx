@@ -31,7 +31,7 @@ const Dashboard = () => {
       >
         Main
       </HomeBtn>
-      <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
+      <Title src="main-title-image.png" />
       <Balls>
         {/* myMon(클릭한 카드)배열 중 6번째까지만 자르고 카드 형식으로 mapping하기*/}
         {myMon.map((mon, index) => {
