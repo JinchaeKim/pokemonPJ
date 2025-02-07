@@ -5,6 +5,7 @@
 <br />
 <br />
 <br />
+
 ## 🖥️ 프로젝트 소개
 
 - 포켓몬의 정보를 확인하고 나만의 포켓몬을 추가할 수 있는 페이지입니다.
@@ -17,6 +18,7 @@
 
 <br />
 <br />
+
 ## 🕰️ 개발 기간
 
 ### :heavy_check_mark: **Development Period**
@@ -25,6 +27,7 @@
 
 <br />
 <br />
+
 ## ⚙️ 개발 환경
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -32,6 +35,7 @@
 
 <br />
 <br />
+
 ## 📁 Pokemon Dex 폴더 구조
 
 ```📦src
@@ -67,6 +71,7 @@
 
 <br />
 <br />
+
 ## 📌 주요 기능
 
 ✔️ Home 페이지에서 버튼을 클릭하여 Dex 페이지로 이동할 수 있습니다.
