@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // Home
 export const BgImg = styled.img`
-  opacity: 70%;
+  opacity: 75%;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -46,13 +46,24 @@ export const BtnSt = styled.button`
 
 // Dashboard
 export const Header = styled.div`
-  /* display: block; */
   width: auto;
   background-color: #586249;
   margin: 20px 90px;
   border-radius: 10px;
   text-align: center;
   padding-bottom: 20px;
+`;
+
+export const HomeBtn = styled.button`
+  background-color: #586249;
+  color: #292e21;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  border: 1px solid #586249;
+  border-radius: 10px;
+  font-size: large;
 `;
 
 export const Title = styled.img`
@@ -63,9 +74,8 @@ export const Title = styled.img`
 `;
 
 export const Balls = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5px;
 `;
 
@@ -108,10 +118,12 @@ export const MonCard = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &:hover {
     transition: transform 0.3s ease;
     transform: translateY(-10px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
   }
 `;
 

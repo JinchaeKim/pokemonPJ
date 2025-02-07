@@ -1,9 +1,17 @@
 import React from "react";
 import PokemonCard from "../PokemonCard/PokemonCard";
-import { Balls, BallSt, Header, Title } from "../../styles/StyledComponents";
+import {
+  Balls,
+  BallSt,
+  Header,
+  HomeBtn,
+  Title,
+} from "../../styles/StyledComponents";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   // state의 값을 조회
   const myMon = useSelector((a) => {
     return a.setMyPokemon;
@@ -14,6 +22,15 @@ const Dashboard = () => {
   const emptyCards = 6 - myMon.length;
   return (
     <Header>
+      <HomeBtn
+        onClick={() => {
+          {
+            navigate("/");
+          }
+        }}
+      >
+        Main
+      </HomeBtn>
       <Title src="/assets/포켓몬_도감_이미지-removebg-preview.png" />
       <Balls>
         {/* myMon(클릭한 카드)배열 중 6번째까지만 자르고 카드 형식으로 mapping하기*/}
