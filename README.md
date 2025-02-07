@@ -1,8 +1,7 @@
 # Pokemon Dex README
 
-**React 숙련 개인 과제 \_ 포켓몬 도감 사이트**
+### React 숙련 개인 과제 \_ 포켓몬 도감 사이트
 
-<br />
 <br />
 <br />
 
@@ -12,8 +11,8 @@
 
 <img src="/스크린샷 2025-02-07 오후 4.18.10.png"/>
 
-- React의 prop-drilling과 Context API, RTK를 통해 페이지를 구현하였습니다.
-- React-router-dom을 활용한 SPA 구현 방식으로 페이지를 이동합니다.
+- React의 **_prop-drilling과 Context API, RTK_**를 통해 페이지를 구현하였습니다.
+- React-router-dom을 활용한 **_SPA_** 구현 방식으로 페이지를 이동합니다.
 - 또한 React의 상태 관리와 이벤트 핸들링을 활용하여 데이터 정보를 다루었습니다.
 
 <br />
@@ -21,9 +20,7 @@
 
 ## 🕰️ 개발 기간
 
-### :heavy_check_mark: **Development Period**
-
-2025/02/03 ~ 2025/02/06
+2025 / 02 / 03 ~ 2025 / 02 / 06
 
 <br />
 <br />
@@ -41,31 +38,32 @@
 
 ## 📁 Pokemon Dex 폴더 구조
 
-```📦src
+```
+📦src
  ┣ 📂assets
- ┃ ┗ 📜react.svg
+ ┃ ┗ react.svg
  ┣ 📂components
  ┃ ┣ 📂Dashboard
- ┃ ┃ ┗ 📜Dashboard.jsx
+ ┃ ┃ ┗ Dashboard.jsx
  ┃ ┣ 📂PokemonCard
- ┃ ┃ ┗ 📜PokemonCard.jsx
+ ┃ ┃ ┗ PokemonCard.jsx
  ┃ ┗ 📂PokemonList
- ┃ ┃ ┗ 📜PokemonList.jsx
+ ┃ ┃ ┗ PokemonList.jsx
  ┣ 📂data
- ┃ ┗ 📜pokemonList.js
+ ┃ ┗ pokemonList.js
  ┣ 📂pages
- ┃ ┣ 📜Detail.jsx
- ┃ ┣ 📜Dex.jsx
- ┃ ┗ 📜Home.jsx
+ ┃ ┣ Detail.jsx
+ ┃ ┣ Dex.jsx
+ ┃ ┗ Home.jsx
  ┣ 📂redux
  ┃ ┣ 📂config
- ┃ ┃ ┗ 📜store.js
+ ┃ ┃ ┗ store.js
  ┃ ┗ 📂slices
- ┃ ┃ ┗ 📜setMyPokemonSlice.js
+ ┃ ┃ ┗ setMyPokemonSlice.js
  ┣ 📂shared
- ┃ ┗ 📜Router.jsx
+ ┃ ┗ Router.jsx
  ┣ 📂styles
- ┃ ┗ 📜StyledComponents.jsx
+ ┃ ┗ StyledComponents.jsx
  ┣ 📜App.css
  ┣ 📜App.jsx
  ┣ 📜index.css
