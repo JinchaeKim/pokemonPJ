@@ -2,6 +2,9 @@
 
 ## React 숙련 개인 과제 \_ 포켓몬 도감 사이트
 
+<br />
+<br />
+<br />
 ## 🖥️ 프로젝트 소개
 
 - 포켓몬의 정보를 확인하고 나만의 포켓몬을 추가할 수 있는 페이지입니다.
@@ -12,16 +15,23 @@
 - React-router-dom을 활용한 SPA 구현 방식으로 페이지를 이동합니다.
 - 또한 React의 상태 관리와 이벤트 핸들링을 활용하여 데이터 정보를 다루었습니다.
 
+<br />
+<br />
 ## 🕰️ 개발 기간
 
 ### :heavy_check_mark: **Development Period**
 
 2025/02/03 ~ 2025/02/06
 
+<br />
+<br />
 ## ⚙️ 개발 환경
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
+<br />
+<br />
 ## 📁 Pokemon Dex 폴더 구조
 
 ```📦src
@@ -55,9 +65,9 @@
  ┗ 📜main.jsx
 ```
 
+<br />
+<br />
 ## 📌 주요 기능
-
-### :heavy_check_mark: **Local Storage**
 
 ✔️ Home 페이지에서 버튼을 클릭하여 Dex 페이지로 이동할 수 있습니다.
 
