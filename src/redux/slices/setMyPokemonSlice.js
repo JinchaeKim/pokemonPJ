@@ -40,35 +40,36 @@ const monSlice = createSlice({
         });
         return;
       }
-      if (state.push(action.payload)) {
-        toast.success("추가되었습니다!", {
-          position: "top-center",
-          autoClose: 2500,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          transition: Bounce,
-        });
-      } // immer에서 .push, .pop, .sort 등의 메서드를 이용해서 state를 변경할 수 있도록 허용함
+      state.push(action.payload);
+      toast.success("추가되었습니다!", {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      // immer에서 .push, .pop, .sort 등의 메서드를 이용해서 state를 변경할 수 있도록 허용함
       // return [...state, action.payload] : state의 주소값을 바꿔줌(setState와 같은 역할)
     },
     deletePokemon: (state, action) => {
-      if (state.pop(action.payload)) {
-        toast.error("삭제되었습니다.", {
-          position: "top-center",
-          autoClose: 2500,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          transition: Bounce,
-        });
-      }
+      toast.error("삭제되었습니다.", {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      return state.filter((mon) => {
+        return mon.id !== action.payload.id;
+      });
     },
   },
 });
