@@ -70,7 +70,7 @@ export const Title = styled.img`
   display: flex;
   margin: auto;
   align-items: center;
-  padding: 10px;
+  padding-bottom: 20px;
 `;
 
 export const Balls = styled.div`
@@ -86,7 +86,7 @@ export const BallSt = styled.img`
   border-radius: 10px;
   padding: 30px;
   background-color: #ffffff6f;
-  margin: 20px;
+  margin: 10px auto;
 `;
 
 // List
