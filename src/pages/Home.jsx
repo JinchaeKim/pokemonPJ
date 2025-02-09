@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { BgImg, BtnSt, Group, TitleImg } from "../styles/StyledComponents";
 
 const Home = () => {
