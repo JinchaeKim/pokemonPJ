@@ -2,7 +2,8 @@
 
 ### React 숙련 개인 과제 \_ 포켓몬 도감 사이트
 
-<br />
+- 배포 링크 : https://pokemon-pj.vercel.app/
+
 <br />
 
 ## 🖥️ 프로젝트 소개
@@ -11,9 +12,9 @@
 
 <img src="/readme/readme-img.png"/>
 
-- React의 **_prop-drilling과 Context API, RTK_**를 통해 페이지를 구현하였습니다.
-- React-router-dom을 활용한 **_SPA_** 구현 방식으로 페이지를 이동합니다.
-- 또한 React의 상태 관리와 이벤트 핸들링을 활용하여 데이터 정보를 다루었습니다.
+- React의 **prop-drilling**과 **Context API, RTK**를 통해 페이지를 구현하였습니다.
+- React-router-dom을 활용한 **SPA** 구현 방식으로 페이지를 이동합니다.
+- React의 상태 관리와 이벤트 핸들링을 활용하여 데이터 정보를 다루었습니다.
 
 <br />
 <br />
