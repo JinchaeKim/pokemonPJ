@@ -114,6 +114,7 @@ export const MonCard = styled.div`
   border-radius: 10px;
   width: 170px;
   height: 250px;
+  margin: 10px auto;
 
   text-align: center;
   justify-content: center;
