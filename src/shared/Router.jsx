@@ -11,6 +11,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/dex" element={<Dex />} />
         <Route path="/detail" element={<Detail />} />
+        {/* 지정하지 않은 모든 경로는 Home으로 (새로고침 오류) */}
         <Route path="/*" element={<Home />} />
       </Routes>
     </BrowserRouter>

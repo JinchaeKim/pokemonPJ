@@ -26,18 +26,16 @@ const Detail = () => {
   const [searchParams] = useSearchParams();
 
   const getId = searchParams.get("id"); // queryString에서 id 값 가져오기
-  console.log("getId", getId);
 
-  // 배열 한 개만 꺼내오기 (map을 위해 filter 사용)
+  // 배열 한 개만 꺼내오기 (45: map을 위해 filter 사용)
+  // 클릭한 카드의 정보를 배열로 출력
   const d_TargetCard = datas.filter((data) => {
     return data.id === Number(getId); // type 일치시키기
   });
-  console.log("targetCard", d_TargetCard); // 클릭한 카드의 정보를 배열로 출력
 
   // d_TargetCard는 배열, myMon도 배열 => 두 배열의 교집합 찾기
-  // 추가 <-> 삭제 버튼
+  // 디테일 페이지 추가 <-> 삭제 버튼
   const findD_Card = myMon.some((a) => d_TargetCard.includes(a));
-  console.log("myMon", myMon);
 
   return (
     <DetailMain>
@@ -61,6 +59,7 @@ const Detail = () => {
               >
                 뒤로가기
               </DBtn>
+              {/* 디테일 페이지의 버튼 추가<->삭제 감지 로직 */}
               {findD_Card === true ? (
                 <D_DelteBtn
                   onClick={() => {
