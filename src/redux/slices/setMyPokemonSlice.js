@@ -4,7 +4,6 @@ import { Bounce, toast } from "react-toastify";
 const initialState = [];
 
 // Slice : 객체, 액션들 + 리듀서
-// Slice.action & add.reducer 를 export
 const monSlice = createSlice({
   name: "setMyPokemon",
   initialState,
@@ -12,6 +11,7 @@ const monSlice = createSlice({
     // 어떤 액션을 어떻게 동작할지
     // 리듀서는 함수
     addPokemon: (state, action) => {
+      // 카드 개수 6개 제한
       if (6 <= state.length) {
         toast.warn("최대 6개의 카드만 표시됩니다!", {
           position: "top-center",
@@ -68,12 +68,14 @@ const monSlice = createSlice({
         transition: Bounce,
       });
       return state.filter((mon) => {
+        // id가 아닌 값 전체를 비교할 경우 주소값이 달라 구분 불가능
         return mon.id !== action.payload.id;
       });
     },
   },
 });
 
+// Slice.action & add.reducer 를 export
 // action creater
 export const { addPokemon, deletePokemon } = monSlice.actions;
 // reducer

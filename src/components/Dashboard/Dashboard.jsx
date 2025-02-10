@@ -16,7 +16,6 @@ const Dashboard = () => {
   const myMon = useSelector((a) => {
     return a.setMyPokemon;
   });
-  // console.log("myMon", myMon);
 
   // 6-(myMon 개수)
   const emptyCards = 6 - myMon.length;
@@ -31,9 +30,10 @@ const Dashboard = () => {
       >
         Main
       </HomeBtn>
-      <Title src="main-title-image.png" />
+      {/* public 이미지는 경로 없이 설정 */}
+      <Title src="dash-title.png" />
       <Balls>
-        {/* myMon(클릭한 카드)배열 중 6번째까지만 자르고 카드 형식으로 mapping하기*/}
+        {/* myMon(클릭한 카드)배열 카드 형식으로 mapping하기*/}
         {myMon.map((mon, index) => {
           return (
             <PokemonCard
@@ -44,7 +44,7 @@ const Dashboard = () => {
           );
         })}
         {/* Array.from : length만큼 요소가 undefinded인 빈 배열을 생성 
-            그 배열의 갯수(index 만큼)만 mapping하기 (요소가 들어가는 부분에 _은 index만 필요하기 때문에 !!)*/}
+            그 배열의 요소 개수(index 만큼)만 mapping하기 (요소가 들어가는 부분에 _ : index만 필요하기 때문에 !!)*/}
         {Array.from({ length: emptyCards }).map((_, index) => (
           <BallSt
             key={index}

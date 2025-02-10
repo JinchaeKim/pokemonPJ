@@ -15,16 +15,14 @@ import {
 } from "../../redux/slices/setMyPokemonSlice";
 
 const PokemonCard = ({ isAdd, data }) => {
-  // 리덕스 2가지 핵심 개념 : useSelector(값 조회), useDispatch(값 추가,삭제,수정)
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   return (
     <MonCard
       key={data.id}
-      // 이벤트 버블링 방지 (클릭한 행위가 버블링)
       onClick={(e) => {
-        // console.log(e.target.contains);
+        // 이벤트 버블링 방지 (클릭한 행위가 버블링)
         if (
           e.target.classList.contains("add-card-btn") ||
           e.target.classList.contains("remove-card-btn")
@@ -43,6 +41,7 @@ const PokemonCard = ({ isAdd, data }) => {
         <MonName>{data.korean_name}</MonName>
         <p>No.{data.id}</p>
       </BottomWrap>
+      {/* 카드의 버튼 추가<->삭제 감지 로직 */}
       {isAdd === true ? (
         <AddBtn
           className="add-card-btn"
