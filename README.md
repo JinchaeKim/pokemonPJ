@@ -10,7 +10,7 @@
 
 - 포켓몬의 정보를 확인하고 나만의 포켓몬을 추가할 수 있는 페이지입니다.
 
-<img src="readme.png"/>
+<img width="1453" alt="Image" src="https://github.com/user-attachments/assets/30c3f7a2-45ab-42ae-8b71-e2281847e3dd"/>
 
 - React의 **prop-drilling**과 **Context API, RTK**를 통해 페이지를 구현하였습니다.
 - React-router-dom을 활용한 **SPA** 구현 방식으로 페이지를 이동합니다.
