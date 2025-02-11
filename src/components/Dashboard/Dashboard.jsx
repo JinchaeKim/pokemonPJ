@@ -43,8 +43,8 @@ const Dashboard = () => {
             />
           );
         })}
-        {/* Array.from : length만큼 요소가 undefinded인 빈 배열을 생성 
-            그 배열의 요소 개수(index 만큼)만 mapping하기 (요소가 들어가는 부분에 _ : index만 필요하기 때문에 !!)*/}
+        {/* Array.from :객체나 이터러블한 객체를 배열로 만들어주는 메서드
+            그 배열의 요소 개수(index 만큼)만 mapping하기 (요소가 들어가는 부분에 _ : index만 필요하기 때문에 !! */}
         {Array.from({ length: emptyCards }).map((_, index) => (
           <BallSt
             key={index}
